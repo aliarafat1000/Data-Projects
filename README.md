@@ -50,22 +50,26 @@ It includes detailed information on:
 - Then, I transformed each query by changing column types, removing unnecessary columns, cleaning text to eliminate specific words, and trimming excess whitespace.
     - 📊 data_jobs_all
 
-        ![2_Project_Analysis_Screenshot1.png](/0_Resources/Images/2_Project_Analysis_Screenshot1.png)
+        ![2_Project_Analysis_Screenshot1](https://github.com/user-attachments/assets/01efe713-4413-4823-ad71-251fc5e000be)
+
 
     - 🛠️ data_job_skills
 
-        ![2_Project_Analysis_Screenshot2.png](/0_Resources/Images/2_Project_Analysis_Screenshot2.png)
+        ![2_Project_Analysis_Screenshot2](https://github.com/user-attachments/assets/5589b23c-cd96-4297-b58a-7b1f1d5b4754)
+
 
 #### 🔗 Load
 
 - Finally, I loaded both transformed queries into the workbook, setting the foundation for my subsequent analysis.
     - 📊 data_jobs_all
 
-        ![2_Project_Analysis_Screenshot3.png](/0_Resources/Images/2_Project_Analysis_Screenshot3.png)
+       ![2_Project_Analysis_Screenshot3](https://github.com/user-attachments/assets/971bcb15-608a-47f0-823c-f454a6780537)
+
 
     - 🛠️ data_job_skills
 
-        ![2_Project_Analysis_Screenshot4.png](/0_Resources/Images/2_Project_Analysis_Screenshot4.png)
+        ![2_Project_Analysis_Screenshot4](https://github.com/user-attachments/assets/76a743cd-e582-4eae-b6a5-6f05c8b43031)
+
 
 ### 📊 Analysis
 
@@ -74,7 +78,8 @@ It includes detailed information on:
 - 📈 There is a positive correlation between the number of skills requested in job postings and the median salary, particularly in roles like Senior Data Engineer and Data Scientist.
 - 💼 Roles that require fewer skills, like Business Analyst, tend to offer lower salaries, suggesting that more specialized skill sets command higher market value.
 
-    ![2_Project_Analysis_Chart1.png](/0_Resources/Images/2_Project_Analysis_Chart1.png)
+    ![2_Project_Analysis_Chart1](https://github.com/user-attachments/assets/2fb4d52f-da2f-4f30-9a29-c320dd17079a)
+
 
 #### 🤔 So What
 
@@ -110,7 +115,8 @@ It includes detailed information on:
 - 💼 Job roles like Senior Data Engineer and Data Scientist command higher median salaries both in the US and internationally, showcasing the global demand for high-level data expertise.
 - 💰 The salary disparity between US and Non-US roles is particularly notable in high-tech jobs, which might be influenced by the concentration of tech industries in the US.
 
-    ![2_Project_Analysis_Chart2.png](/0_Resources/Images/2_Project_Analysis_Chart2.png)
+   ![2_Project_Analysis_Chart2](https://github.com/user-attachments/assets/0f67c54d-214f-4f1f-9ff9-cc40126f9b3f)
+
 
 #### **🤔 So What**
 
@@ -129,13 +135,15 @@ It includes detailed information on:
 
 - I created a relationship between my two tables using the `job_id` column.
 
-    ![2_Project_Analysis_Screenshot5.png](/0_Resources/Images/2_Project_Analysis_Screenshot5.png)
+   ![2_Project_Analysis_Screenshot5](https://github.com/user-attachments/assets/81c90e52-e4da-42e2-a288-9dd9b52c9da4)
+
 
 #### 📃 Power Pivot Menu
 
 - The Power Pivot menu was used to refine my data model and makes it easy to create measures.
 
-    ![2_Project_Analysis_Screenshot6.png](/0_Resources/Images/2_Project_Analysis_Screenshot6.png)
+    ![2_Project_Analysis_Screenshot6](https://github.com/user-attachments/assets/4df2402d-dd9a-4ab1-a476-551a7eeff644)
+
 
 ### 📊Analysis
 
@@ -144,7 +152,8 @@ It includes detailed information on:
 - 💻 SQL and Python dominate as top skills in data-related jobs, reflecting their foundational role in data processing and analysis.
 - ☁️ Emerging technologies like AWS and Azure also show significant presence, underlining the industry's shift towards cloud services and big data technologies.
 
-    ![2_Project_Analysis_Chart3.png](/0_Resources/Images/2_Project_Analysis_Chart3.png)
+    ![2_Project_Analysis_Chart3](https://github.com/user-attachments/assets/982b5373-438e-4549-8302-4075beb56698)
+
 
 #### 🤔So What
 
@@ -168,7 +177,8 @@ It includes detailed information on:
 - 💰 Higher median salaries are associated with skills like Python, Oracle, and SQL, suggesting their critical role in high-paying tech jobs.
 - 📉 Skills like PowerPoint and Word have the lowest median salaries and likelihood, indicating less specialization and demand in high-salary sectors.
 
-    ![2_Project_Analysis_Chart4.png](/0_Resources/Images/2_Project_Analysis_Chart4.png)
+    ![2_Project_Analysis_Chart4](https://github.com/user-attachments/assets/18d1816a-7dff-4f87-910e-453b11607bb5)
+
 
 ### 🤔So What
 
