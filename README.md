@@ -1,7 +1,3 @@
-Here’s a tailored README file for your coffee sales project, styled similarly to the one for the job market analysis:
-
----
-
 # Coffee Sales Dashboard
 
 ## Introduction
