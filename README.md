@@ -2,98 +2,128 @@
 
 ## Introduction
 
-In the competitive coffee industry, understanding sales patterns and customer preferences is essential for maximizing profits and improving customer satisfaction. This project utilizes Excel to analyze coffee sales data, providing actionable insights into various sales metrics, including coffee types, sizes, sales trends, and customer behavior.
+In the competitive coffee industry, understanding sales patterns and customer preferences is crucial for maximizing profits and improving customer satisfaction. This project leverages Excel to analyze coffee sales data, offering insights into various sales metrics, including coffee types, sizes, sales trends, and customer behavior.
+
+
+![Screenshot 2025-01-23 152055](https://github.com/user-attachments/assets/b1435692-0690-4ed6-9f8e-cf94c9eebe9a)
+
 
 ### Key Questions
 
-To better understand coffee sales and customer behavior, this analysis addresses the following:
+This analysis aims to answer the following key questions:
 1. **What are the sales trends over time?**
-2. **Which coffee types and sizes are the most popular?**
-3. **How do sales vary by country or region?**
+2. **Which coffee types and sizes are most popular?**
+3. **How do sales vary by region?**
 4. **Who are the top customers contributing to sales?**
 5. **What impact do loyalty programs have on coffee sales?**
-6. **What are the sales patterns by brew type?**
+6. **How does roast type affect sales?**
+
+![coffeeDashboard](https://github.com/user-attachments/assets/0cd8ef28-0c1a-4843-b120-d63373bcf7d7)
+
+
 
 ---
 
 ## Tools & Excel Features
 
-This project leverages the power of Excel's features to deliver a comprehensive dashboard:
-- **📊 PivotTables**: To summarize sales data across multiple dimensions like coffee types, sizes, and regions.
-- **📈 PivotCharts**: To create visual representations of trends and patterns.
-- **🎛️ Slicers**: For interactive filtering by timeline, coffee size, coffee type, and customer segments.
-- **📅 Timeline Filters**: To analyze sales over specific timeframes and track trends.
+This project makes use of various Excel tools and functions to provide insights:
+- **📊 PivotTables**: To summarize data across multiple dimensions, such as coffee types, sizes, and regions.
+- **📈 PivotCharts**: For visual representation of sales data.
+- **🎛️ Slicers**: To filter data interactively by timeline, coffee size, and other categories.
+- **🧮 Excel Functions**:
+    - **XLOOKUP**: To retrieve customer information (e.g., loyalty card status, customer name, and country) and product details.
+    - **INDEX & MATCH**: For quicker lookups to pull relevant product information based on order ID.
+    - **Nested IFs**: To categorize coffee types (Arabica, Excelsa, Liberica, Robusta).
 
 ---
 
 ## Coffee Sales Dataset
 
-The dataset used for this project includes real-world coffee sales data with the following fields:
-- **☕ Coffee Type**: E.g., Espresso, Cappuccino, Latte, etc.
-- **📦 Coffee Size**: E.g., Small, Medium, Large.
-- **📍 Country**: Location of the sale.
-- **💳 Loyalty Program**: Indicates whether the sale was made using a loyalty card.
-- **👤 Customer**: Identifies top customers and their contribution to sales.
-- **⏳ Date/Time**: Provides a timeline of sales transactions.
+The dataset used in this project contains key information on:
+- **☕ Coffee Types**: Arabica, Excelsa, Liberica, Robusta.
+- **🌱 Roast Types**: Dark, Medium, Light.
+- **📦 Coffee Sizes**: Small, Medium, Large.
+- **📍 Country**: The region or country of the sale.
+- **💳 Loyalty Program**: Whether the sale was made using a loyalty card.
+- **👤 Customer ID & Details**: Including customer names and country.
+- **⏳ Date/Time**: Sales transaction timeline.
 
 ---
 
 ## Dashboard Features
 
 ### 1️⃣ **Sales Trends Over Time**
-- Analyzed sales trends using timeline slicers and line charts to understand seasonality and growth patterns.
-- Users can interactively select time periods to view detailed trends.
+- Sales trends are analyzed over time using timeline slicers, providing insights into seasonality and growth patterns.
+- Users can select time periods interactively to explore trends.
 
 ---
 
 ### 2️⃣ **Coffee Type & Size Analysis**
-- Displayed coffee sales by type and size using PivotCharts.
-- Identified the most popular coffee types and sizes, with a breakdown of their contribution to total sales.
+- PivotCharts summarize coffee sales by type (Arabica, Excelsa, Liberica, Robusta) and size (Small, Medium, Large).
+- This analysis identifies the most popular coffee types and sizes, helping businesses optimize product offerings.
 
 ---
 
 ### 3️⃣ **Regional Sales Insights**
-- Used country-level data to explore sales distribution by location.
-- Created a bar chart to highlight regions with the highest sales performance.
+- Using country-level data, the dashboard provides insights into regional sales performance.
+- A bar chart visualizes the top regions driving sales.
 
 ---
 
 ### 4️⃣ **Top Customers**
-- Highlighted the top 10 customers based on total sales.
-- Visualized customer contributions using a dynamic bar chart.
+- The top 5 customers based on sales volume and revenue are highlighted.
+- Insights into customer behavior, including loyalty program participation, are derived from this analysis.
 
 ---
 
-### 5️⃣ **Loyalty Program Analysis**
-- Compared sales made by loyalty program members versus non-members.
-- Provided insights into how loyalty programs drive repeat purchases and increase average order value.
+### 5️⃣ **Loyalty Program Impact**
+- Sales data is compared between loyalty program members and non-members.
+- The dashboard helps identify the effect of loyalty programs on repeat purchases and average order value.
 
 ---
 
-### 6️⃣ **Brew Type Breakdown**
-- Created a pie chart to show the proportion of sales by brew type (e.g., drip, espresso, French press).
-- Helped identify trends in brewing preferences among customers.
+### 6️⃣ **Roast Type and Coffee Type Breakdown**
+- The dashboard includes a breakdown of sales by roast type (Dark, Medium, Light) and coffee type (Arabica, Excelsa, Liberica, Robusta).
+- Visualizations allow businesses to see which roast and coffee types are most in-demand.
+
+---
+
+## Excel Functions Used
+
+### **Nested IF Formula**
+- Used to categorize coffee types based on customer preferences or order details.
+    ```
+    =IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica","No Data"))))
+    ```
+
+### **XLOOKUP**
+- Retrieves customer details such as loyalty status, customer name, and country.
+    ```
+    =XLOOKUP([@[Customer ID]],customers!$A$2:$A$1001,customers!$I$2:$I$1001,,0)
+    ```
+
+### **INDEX & MATCH**
+- Used for quicker lookups to fetch product details based on order ID.
+    ```
+    =INDEX(products!$A$2:$G$49,MATCH(orders!$D2,products!$A$2:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))
+    ```
 
 ---
 
 ## Insights
 
 ### 💡 Key Findings
-1. **Seasonal Trends**: Sales peaked during holiday seasons, indicating an opportunity for targeted marketing campaigns.
-2. **Top Performers**: Espresso and Cappuccino were the most popular coffee types, while large-sized drinks accounted for the highest revenue share.
-3. **Regional Strengths**: Sales were strongest in North America and Europe, suggesting a focus on these regions for product expansion.
-4. **Customer Loyalty**: Loyalty program members contributed significantly to revenue, with higher purchase frequency and average order size.
-5. **Brew Preferences**: Drip coffee dominated sales, but there is growing interest in specialty brews like French press and cold brew.
+1. **Seasonality**: Sales trends show increased demand during winter, with certain coffee types (e.g., Arabica) seeing seasonal spikes.
+2. **Popular Products**: Light roast being the most popular roast type.
+3. **Regional Insights**: Sales are strongest in America.
+4. **Customer Loyalty**: Loyalty program members contribute a significant portion of revenue, demonstrating the effectiveness of rewards programs.
+5. **Roast Preferences**: Light roast coffee dominates sales, but Medium and Light roasts are growing in popularity.
 
 ### 🤔 So What?
-- These insights enable coffee shop owners and managers to optimize their inventory, create targeted marketing campaigns, and enhance customer loyalty programs to boost profitability.
+- These insights are useful for coffee shop owners and managers looking to optimize their product offerings, improve customer retention through loyalty programs, and plan targeted marketing campaigns based on seasonal trends.
 
 ---
 
 ## Conclusion
 
-This coffee sales dashboard showcases the power of Excel in analyzing and visualizing sales data. By leveraging features like PivotTables, PivotCharts, slicers, and timelines, this project provides actionable insights for driving sales and improving customer satisfaction. Whether you're analyzing coffee types, customer behavior, or regional trends, this dashboard serves as a valuable tool for data-driven decision-making.
-
---- 
-
-Let me know if you'd like to tweak or expand on anything!
+The coffee sales dashboard provides an in-depth look into key factors driving sales in the coffee industry. Using Excel’s powerful functions like XLOOKUP, INDEX, MATCH, and PivotTables, this project uncovers insights into coffee preferences, customer loyalty, and regional trends. This analysis helps businesses make data-driven decisions to increase sales, enhance customer satisfaction, and optimize inventory.
