@@ -8,6 +8,22 @@ Maximizing revenue is essential for taxi drivers in a competitive industry. This
 
 We conduct an **A/B test** to analyze the relationship between **total fare amount** and **payment type (cash vs. card)**. Using **Python, NumPy, Pandas, Matplotlib, Seaborn, and Scipy**, we investigate whether digital payments generate higher revenue and how this can benefit drivers.
 
+## 🔧 Skills Used  
+
+- 🐍 Python  
+- 📊 Data Analysis  
+- 📈 Exploratory Data Analysis (EDA)  
+- 🏗️ Feature Engineering  
+- 🛠️ Data Cleaning & Preprocessing  
+- 📉 Statistical Analysis  
+- 🔬 Hypothesis Testing (T-Test)  
+- 🔢 NumPy & Pandas  
+- 🎨 Data Visualization (Matplotlib, Seaborn)  
+- 📑 Descriptive Statistics  
+- 📌 A/B Testing  
+- 📚 Statsmodels & Scipy  
+
+
 ## Research Question ❓
 
 **Does the total fare amount vary based on the payment method? Can we encourage customers to use payment methods that generate higher revenue for drivers, without negatively impacting their experience?**
@@ -227,5 +243,4 @@ print('T Statistics:', t_stats, 'P-Value:', p_value)
 - **Encouraging Digital Payments:** Taxi companies could offer incentives (discounts, loyalty points) for card payments.
 - **Optimizing Payment Preferences:** Educating drivers about customer preferences can help them strategize ride acceptance.
 
-This markdown file is structured for **GitHub documentation**, with step-by-step code explanations and supporting images placed at relevant sections.
 
