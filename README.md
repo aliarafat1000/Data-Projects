@@ -45,10 +45,10 @@ print(data.head(3))
 
 To understand column definitions, we displayed the metadata:
 
-```python
-img = Image.open(r"D:\Data Analyst\stats\tech classes\archive\data_description.png")
-display(img)
-```
+![image](https://github.com/user-attachments/assets/cb2c8ca7-da91-4afb-ab86-ef82f31e0e88)
+![image](https://github.com/user-attachments/assets/64d1282e-147b-4206-9f0b-e6a6a7a400e3)
+
+
 
 ---
 
@@ -81,6 +81,9 @@ We checked for missing values and found only 1% of missing data, which we droppe
 print(df.isnull().sum())
 df.dropna(inplace=True)
 ```
+![image](https://github.com/user-attachments/assets/b21c1a63-790d-4ca7-8d0b-bdafc4ba81b6)
+
+Since only 1.02% of values are duplicate we drop them all. 
 
 #### **Handling Duplicates**
 
@@ -94,10 +97,15 @@ df.drop_duplicates(inplace=True)
 
 Box plots before and after removing outliers:
 
+
 ```python
 plt.boxplot(df['fare_amount'])
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/aab25288-0505-4aaa-8f2d-308787ee620f)
+![image](https://github.com/user-attachments/assets/48449e83-4f12-4671-b2d6-a820a5ea8018)
+
+
 
 We used the Interquartile Range (IQR) method to remove outliers:
 
@@ -112,6 +120,9 @@ for col in ['fare_amount', 'trip_distance', 'duration']:
 plt.boxplot(df['fare_amount'])
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/11a8d602-4e4b-45d1-bc0d-eb23ef841068)
+![image](https://github.com/user-attachments/assets/6415e6d8-872b-4528-af90-6c5a515c76ce)
+
 
 ---
 
@@ -124,6 +135,8 @@ plt.title('What do customers prefer as payment method?')
 plt.pie(df['payment_type'].value_counts(normalize=True), labels=df['payment_type'].value_counts().index, startangle=90, shadow=True, autopct='%1.1f%%', colors=['#FA643F', '#FFBCAB'])
 plt.show()
 ```
+![pie chart](https://github.com/user-attachments/assets/9ba94356-d04a-44e4-ba3e-347fb2a3feca)
+
 
 ### **Effect of Distance and Fare on Payment Method**
 
@@ -141,6 +154,46 @@ plt.hist(df[df['payment_type'] == 'Cash']['trip_distance'], bins=20, edgecolor='
 plt.legend()
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/e1528dc9-875f-42cc-9e42-39ae0f0633da)
+
+
+### **Does passenger count effectss fare? Using stacked bar chart with propotional representation**
+
+```python
+passenger_count = df.groupby(['payment_type', 'passenger_count'])[['passenger_count']].count()
+passenger_count.rename(columns = {'passenger_count':'count'}, inplace=True)
+passenger_count.reset_index(inplace = True)
+passenger_count['perc'] = (passenger_count['count']/passenger_count['count'].sum())*100
+passenger_count
+```
+![image](https://github.com/user-attachments/assets/0f0d4be4-df01-48e8-9273-e66278210393)
+
+```python
+df_temp = pd.DataFrame(columns = ['payment_type', 1, 2, 3, 4, 5])
+df_temp['payment_type'] = ['Card', 'Cash']
+df_temp.iloc[0,1:] = passenger_count.iloc[0:5,-1]
+df_temp.iloc[1,1:] = passenger_count.iloc[5:,-1]
+fig, ax = plt.subplots(figsize=(20,6))
+
+df_temp.plot(x = 'payment_type', kind = 'barh', stacked=True, ax = ax, 
+        color = ['#FA643F', '#FFBCAB', '#CBB2B2', '#F1F1F1', '#FD9F9F'])
+
+# Add percentage text
+for p in ax.patches:
+    width = p.get_width()
+    height = p.get_height()
+    x, y = p.get_xy()
+    ax.text(x + width / 2,
+            y + height / 2,
+            '{:.0f}%'.format(width),
+            horizontalalignment='center',
+            verticalalignment='center')
+    
+plt.show()
+```
+
+![image](https://github.com/user-attachments/assets/47213847-1d9e-4e6c-a7c0-a6e050dc6909)
+
 
 ## **Hypothesis Testing**
 
@@ -157,6 +210,8 @@ cash_sample = df[df['payment_type'] == 'Cash']['fare_amount']
 t_stats, p_value = st.ttest_ind(card_sample, cash_sample, equal_var=False)
 print('T Statistics:', t_stats, 'P-Value:', p_value)
 ```
+![image](https://github.com/user-attachments/assets/ab11ed74-f72f-4638-a2a9-059cd912f478)
+
 
 ### **Results and Conclusion**
 
