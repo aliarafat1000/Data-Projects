@@ -71,8 +71,8 @@ This project provides a comprehensive overview of sales data for a retail busine
 
 | KPI Cards       | Trends & Breakdown                | Fat Content Analysis       |
 |------------------|-----------------------------------|----------------------------|
-| ![Screenshot 2025-02-07 152338](https://github.com/user-attachments/assets/6ccc5ac9-c500-4b76-b471-f11e5c39611a)
- | ![Screenshot 2025-02-07 152406](https://github.com/user-attachments/assets/7a621205-3909-4677-b42b-764acbad3704)
+| ![Screenshot 2025-02-07 152338](https://github.com/user-attachments/assets/6ccc5ac9-c500-4b76-b471-f11e5c39611a) |
+ | ![Screenshot 2025-02-07 152406](https://github.com/user-attachments/assets/7a621205-3909-4677-b42b-764acbad3704) |
  | ![Screenshot 2025-02-07 152419](https://github.com/user-attachments/assets/7d761694-f9ad-4874-83cd-d32fbe772abe)
  |
 
