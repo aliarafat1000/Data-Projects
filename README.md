@@ -75,11 +75,5 @@ This project provides a comprehensive overview of sales data for a retail busine
 
 > This interactive dashboard empowers retail managers to make **data-driven decisions** and improve performance across outlets.
 
----
 
-## 🤝 Contributing
-
-If you'd like to contribute or discuss further, feel free to fork this repository and raise a PR.
-
-Happy analyzing! 😊
 
