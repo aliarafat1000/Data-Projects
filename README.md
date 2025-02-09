@@ -1,5 +1,7 @@
 # Excel Salary Dashboard
-![Jobs_Analytics_Dashboard.xlsx](https://github.com/aliarafat1000/Data-Projects/blob/job-analytics-dashboard-excel/Jobs_Analytics_Dashboard.xlsx)
+
+![jobs_1_dashboard](https://github.com/user-attachments/assets/df04fc2e-8200-401e-8287-e9439bf1cd2b)
+
 
 ## Introduction
 
